@@ -44,7 +44,8 @@ public class TurnosController {
     public ResponseEntity registerTurno(@RequestBody @Valid DataRegisterTurno dataRegisterTurno,
                                         UriComponentsBuilder uriComponentsBuilder){
 
-        LocalDateTime horaActual = LocalDateTime.now().withHour(15).withMinute(30).withSecond(00);
+        LocalDateTime horaActual = LocalDateTime.now();
+                //.withHour(15).withMinute(30).withSecond(00);
 
 
 
