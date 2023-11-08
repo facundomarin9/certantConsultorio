@@ -40,6 +40,14 @@ Cabe aclarar que no me alcanzo el tiempo para terminar una funcionalidad de actu
 
 ![image](https://github.com/facundomarin9/certantConsultorio/assets/97562173/085fa4a7-0367-421e-bb46-12347fcf8389)
 
+Se recomienda el siguiente flujo de creacion de datos:
+
+1) Crear Pacientes.
+2) Crear Especialidad.
+3) Crear Profesional.
+4) Agregar Horarios al profesional creado.
+5) Agregar Especialidad al profesional creado.
+6) Crear el turno!
 
 
 Muchas Gracias!
