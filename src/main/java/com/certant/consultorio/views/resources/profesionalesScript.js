@@ -2,23 +2,24 @@ const url = "http://localhost:8080/profesionales";
 const urlEspecialidades = "http://localhost:8080/especialidades";
 const urlHoras = "http://localhost:8080/horas";
 const tablaBody = document.getElementById("tablaProfesionalesId");
-const checkBoxesContainer = document.getElementById("checkboxConteiner");
 const botonCargarHorarios = document.getElementById("botonCargarHorarios");
 const botonCargarProfesionales = document.getElementById("botonCargarProfesionales");
+const btnCargarEspecialidades = document.getElementById("botonCargarEspecialidad");
+const urlAgregarEspecialidadProfesional = "http://localhost:8080/profesionales/agregarEspecialidadProfecional";
 
 
 
 
 document.addEventListener("DOMContentLoaded", function () {
     cargarTabla();
-    cargarCheckbox();
     cargarComboBoxProfesionales();
+    cargarComboBoxProfesionalesEsp();
+    cargarComboEspecialidades();
     cargarComboBoxHorarios();
-    
-
-
-
 });
+
+
+
 
 botonCargarHorarios.addEventListener("click", function () {
 
@@ -28,6 +29,18 @@ botonCargarHorarios.addEventListener("click", function () {
     setTimeout(function () {
         location.reload();
     }, 1000);
+
+});
+
+btnCargarEspecialidades.addEventListener("click", function() {
+
+    enviarDatosEspecialidades();
+    const modalProfesional = document.getElementById("modalEspecialidadId");
+    $(modalProfesional).modal("hide");
+    setTimeout(function () {
+        location.reload();
+    }, 1000);
+
 
 });
 
@@ -41,6 +54,74 @@ botonCargarProfesionales.addEventListener("click", function () {
     }, 1000);
 
 });
+
+function enviarDatosEspecialidades(){
+
+    const opcionComboProfesional = document.getElementById("comboProfesionales2").value;
+    const opcionComboEspecialidad = document.getElementById("comboEspecialidades").value;
+    const datosEnviarEspeProf = {};
+    datosEnviarEspeProf.idProfesional = opcionComboProfesional;
+    datosEnviarEspeProf.idEspecialidad = opcionComboEspecialidad;
+
+    const opciones = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(datosEnviarEspeProf)
+    };
+    fetch(urlAgregarEspecialidadProfesional, opciones)
+        .then(response => {
+            if(response.status === 200){
+                alert("Especialidad Cargada!")
+            }
+            if (!response.ok) {
+                
+                throw new Error("Error en la solicitud");
+            }
+            
+            return response.status;
+        })
+        .then(data => {
+
+            console.log("Respuesta del servidor:", data);
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        });
+
+
+}
+
+function cargarComboEspecialidades(){
+
+    const comboBox = document.getElementById("comboEspecialidades");
+    fetch(urlEspecialidades)
+        .then(response => {
+            if (response.status === 200) {
+                return response.json();
+            } else {
+                throw new Error("Error en la solicitud al servidor.");
+            }
+        })
+        .then(data => {
+            data.content.forEach(function(dato)  {
+                const opcionCombo = document.createElement("option");
+                opcionCombo.value = dato.id;
+                opcionCombo.text = dato.especialidad;
+                comboBox.appendChild(opcionCombo);
+
+
+            })
+
+                .catch(error => {
+                    // Manejar errores de la solicitud
+                    console.error("Error: " + error);
+                });
+
+        })
+
+}
 
 function enviarDatosHorarios(){
     const cuerpoDate = "2023-11-05T";
@@ -166,6 +247,37 @@ function cargarComboBoxHorarios(){
 
 }
 
+function cargarComboBoxProfesionalesEsp(){
+
+    const comboBox = document.getElementById("comboProfesionales2");
+    fetch(url)
+        .then(response => {
+            if (response.status === 200) {
+                return response.json();
+            } else {
+                throw new Error("Error en la solicitud al servidor.");
+            }
+        })
+        .then(data => {
+            data.forEach(function(dato)  {
+                const opcionCombo = document.createElement("option");
+                opcionCombo.value = dato.id;
+                opcionCombo.text = dato.nombre + " " + dato.apellido;
+                comboBox.appendChild(opcionCombo);
+
+
+            })
+
+                .catch(error => {
+                    // Manejar errores de la solicitud
+                    console.error("Error: " + error);
+                });
+
+        })
+
+
+}
+
 function cargarComboBoxProfesionales() {
 
     const comboBox = document.getElementById("comboProfesionales");
@@ -193,40 +305,6 @@ function cargarComboBoxProfesionales() {
                 });
 
         })
-
-}
-
-function cargarCheckbox() {
-
-    fetch(urlEspecialidades)
-        .then(response => {
-            if (response.status === 200) {
-                return response.json();
-            } else {
-                throw new Error("Error en la solicitud al servidor.");
-            }
-        })
-        .then(data => {
-            data.content.forEach((dato, index) => {
-
-
-                const checkBox = document.createElement("div");
-                checkBox.classList.add("form-check");
-                checkBox.innerHTML = `<input class="checkbox-group" type="checkbox" name="checkbox" id="checkBox${index}"  value="${dato.id}"}>
-            <label class="form-check-label" for="checkbox${index}">
-              ${dato.especialidad} 
-            </label>`
-
-                checkBoxesContainer.appendChild(checkBox);
-
-            });
-
-
-        })
-        .catch(error => {
-            // Manejar errores de la solicitud
-            console.error("Error: " + error);
-        });
 
 }
 

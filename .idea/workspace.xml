@@ -5,26 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88d1c369-5dbf-49c3-ac1f-91a29bbd72e7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V10__create-table-especialidadprofesional.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/versionasFlywayNoUsar/V10__create-table-especialidadprofesional.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1__create-table-especialidades.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/versionasFlywayNoUsar/V1__create-table-especialidades.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V2__alter-table-especialidades-add-activo.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/versionasFlywayNoUsar/V2__alter-table-especialidades-add-activo.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V3__alter-table-especialidades-add-fechabaja.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/versionasFlywayNoUsar/V3__alter-table-especialidades-add-fechabaja.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V4__create-table-profesionales.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/versionasFlywayNoUsar/V4__create-table-profesionales.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V5__create-table-especialidadprofesional.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/versionasFlywayNoUsar/V5__create-table-especialidadprofesional.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V6__create-table-horarios.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/versionasFlywayNoUsar/V6__create-table-horarios.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V8__create-table-paciente.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/versionasFlywayNoUsar/V8__create-table-paciente.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V9__create-table-turno.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/versionasFlywayNoUsar/V9__create-table-turno.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V10__create-table-especialidadprofesional.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V1__create-table-especialidades.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V2__alter-table-especialidades-add-activo.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V3__alter-table-especialidades-add-fechabaja.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V4__create-table-profesionales.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V5__create-table-especialidadprofesional.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V6__create-table-horarios.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V8__create-table-paciente.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V9__create-table-turno.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/certant/consultorio/views/profesionales.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/certant/consultorio/views/profesionales.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/certant/consultorio/views/resources/profesionalesScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/certant/consultorio/views/resources/profesionalesScript.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,16 +45,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/Documentos/Certant/consultorio/src/main/resources",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.tools"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Documentos/Certant/consultorio/src/main/resources&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.certant.consultorio.models.turnos" />

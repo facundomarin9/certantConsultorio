@@ -72,7 +72,45 @@
         Agregar Horarios
     </button>
 
-    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEspecialidadId" id="botonAgregarEspecialidad">
+        Agregar Especialidad
+    </button>
+
+    <!-- Modal AGREGAR ESPECIALIDAD-->
+    <div class="modal fade" id="modalEspecialidadId" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar especialidad a un profesional</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <div class="mb-3">
+                            <label for="nombreId" class="form-label">Seleccionar Profesional</label>
+                            <select class="form-control" id="comboProfesionales2">
+
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inicioConsultaId" class="form-label">Seleccionar Especialidad</label>
+                            <select class="form-control" id="comboEspecialidades">
+
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="botonCargarEspecialidad">Cargar Especialidad</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Horarios para mostrar -->
 
   <div class="modal fade" id="modalHorariosProfesional" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -154,9 +192,7 @@
                             <label for="matriculaId" class="form-label">Matricula</label>
                             <input type="text" class="form-control" placeholder="Matricula" id="matriculaId">
                         </div>
-                        <div class="mb-3" id="checkboxConteiner">
-
-                        </div>
+                        
                     </div>
 
                 </div>
