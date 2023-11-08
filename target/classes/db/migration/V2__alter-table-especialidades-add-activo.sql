@@ -1,0 +1,1 @@
+alter table especialidades add activo tinyint;
